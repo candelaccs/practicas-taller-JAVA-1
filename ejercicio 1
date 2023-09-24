@@ -1,0 +1,44 @@
+- Analice el programa Ej01Tabla2.java, que carga un vector que representa la
+tabla del 2. Luego escriba las instrucciones necesarias para:
+- generar enteros aleatorios hasta obtener el número 11. Para cada número
+muestre el resultado de multiplicarlo por 2 (accediendo al vector).
+
+
+
+package tema1;
+
+public class Ej01Tabla2 {
+
+    /**
+     * Carga un vector que representa la tabla del 2
+     */
+    public static void main ( String[] args) {
+        int DF=11;  // dimension fisica //
+        int [] tabla2 = new int[DF]; // indices de 0 a 10
+        int i; // declara variable indice //
+        for (i=0;i<DF;i++) { // inicializa variable, cuida que no se pase y avanza, empieza en 0//
+            tabla2[i]=2*i;  // al valor que hay en i lo multiplica por 2: 
+            System.out.println (tabla2 [i]); } // esto lo agregue yo RECORDAR CORCHETES O NO VA A FUNCIONAR // 0,2,4,6,8,10,12,14,16,18,20. (resultados)
+        System.out.println("2x" + "5" + "="+ tabla2[5]); // pregunta cual es el resultado de multiplicar 5 por 2. //
+
+    }
+    
+
+package tema1;
+
+public class Ej01Tabla2 {
+
+    /**
+     * Carga un vector que representa la tabla del 2
+     */
+    public static void main ( String[] args) {
+        int DF=11;  // dimension fisica //
+        int [] tabla2 = new int[DF]; // indices de 0 a 10
+        int i; // declara variable indice //
+        GeneradorAleatorio.iniciar ();
+        for (i=0;i<DF; tabla2 [i++] = GeneradorAleatorio.generarInt (12)  ) { // inicializa variable, cuida que no se pase y avanza, empieza en 0//
+            tabla2[i]=2*i;  // al valor que hay en i lo multiplica por 2: 
+            System.out.println (tabla2 [i]); } // esto lo agregue yo RECORDAR CORCHETES O NO VA A FUNCIONAR //
+
+    }
+    
