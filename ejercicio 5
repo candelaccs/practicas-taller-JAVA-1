@@ -1,0 +1,59 @@
+El dueño de un restaurante entrevista a cinco clientes y les pide que califiquen
+(con puntaje de 1 a 10) los siguientes aspectos: (0) Atención al cliente (1) Calidad
+de la comida (2) Precio (3) Ambiente.
+Escriba un programa que lea desde teclado las calificaciones de los cinco clientes
+para cada uno de los aspectos y almacene la información en una estructura. Luego
+imprima la calificación promedio obtenida por cada aspecto.
+
+
+package taller;
+
+/**
+ *
+ * @author cande
+ */
+
+import PaqueteLectura.Lector;
+import PaqueteLectura.GeneradorAleatorio;
+
+public class Taller {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        int [][] puntajes = new int [5][4];
+        
+        int i;
+        int j;
+        int puntaje;
+        
+        for (i=0; i<5; i++) {
+            System.out.println ("cliente numero " + i );
+            for (j=0; j<4; j++) {
+                 System.out.println (" ingrese puntaje");
+                 puntaje = Lector.leerInt ();
+                 puntajes [i][j] = puntaje;
+            }
+        }
+        int suma;
+        double promedio;
+        
+        for (j=0; j<4; j++) { 
+             suma = 0;
+             for (i=0; i<5; i++) 
+                 suma = suma + puntajes [i][j];
+             promedio = suma/5;
+             System.out.println (" el promedio del aspecto " + j + " es " + promedio);
+             
+       } 
+    }
+    
+}
+
+// me da bien pero no me da bien el promedio, lo redondea //
+
+ 
+
+ 
