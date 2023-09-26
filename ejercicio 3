@@ -1,0 +1,36 @@
+package taller;
+
+/**
+ *
+ * @author cande
+ */
+
+import PaqueteLectura.Lector;
+import PaqueteLectura.GeneradorAleatorio;
+
+public class Taller {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        int [][] matriz = new int [5][5];
+        
+        int i, j;
+        
+        GeneradorAleatorio.iniciar();
+        
+        for (i=0; i<5; i++) {
+            
+            for (j=0; j<5; j++)
+                matriz [i][j]= GeneradorAleatorio.generarInt (31);
+        }
+        
+        for (i=0; i<5; i++) {
+            System.out.println ("-------------");
+            for (j=0; j<5; j++)
+                System.out.print( matriz [i][j] + " | ");
+        }
+    }
+}
