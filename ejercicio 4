@@ -1,0 +1,43 @@
+package taller;
+
+/**
+ *
+ * @author cande
+ */
+
+import PaqueteLectura.Lector;
+import PaqueteLectura.GeneradorAleatorio;
+
+public class Taller {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        int [][] edificio = new int [9][5];
+        int piso;
+        int oficina;
+        
+        System.out.println (" ingrese piso ");
+        piso = Lector.leerInt();
+        System.out.println (" ingrese oficina ");        
+        oficina = Lector.leerInt();
+        
+        while ( piso != 9 ) {
+            edificio [piso][oficina] = edificio [piso][oficina] +1;
+            System.out.println (" ingrese piso ");
+            piso = Lector.leerInt();
+            System.out.println (" ingrese oficina ");        
+            oficina = Lector.leerInt();
+        }
+        
+        int i;
+        int j;
+        
+        for (i=1; i<9; i++) 
+            for (j=1; j<5; j++)
+                System.out.println ("la cantidad de gente que estuvo en el piso " + i + " en la oficina " + j + " es " + edificio [i][j]);
+    }
+    
+}
