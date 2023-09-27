@@ -7,7 +7,7 @@ de piso 9. Al finalizar la llegada de personas, informe lo pedido.
 
 
 
-package taller;
+package Practica1;
 
 /**
  *
@@ -17,36 +17,44 @@ package taller;
 import PaqueteLectura.Lector;
 import PaqueteLectura.GeneradorAleatorio;
 
-public class Taller {
+public class Practica1 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        int [][] edificio = new int [9][5];
+        int [][] edificio = new int [8][4];
         int piso;
         int oficina;
         
         System.out.println (" ingrese piso ");
         piso = Lector.leerInt();
+  
         System.out.println (" ingrese oficina ");        
         oficina = Lector.leerInt();
         
         while ( piso != 9 ) {
+            piso--;
+            oficina--;
             edificio [piso][oficina] = edificio [piso][oficina] +1;
             System.out.println (" ingrese piso ");
             piso = Lector.leerInt();
+           
             System.out.println (" ingrese oficina ");        
             oficina = Lector.leerInt();
+           
         }
         
         int i;
         int j;
         
-        for (i=1; i<9; i++) 
-            for (j=1; j<5; j++)
-                System.out.println ("la cantidad de gente que estuvo en el piso " + i + " en la oficina " + j + " es " + edificio [i][j]);
+        for (i=0; i<8; i++) 
+            for (j=0; j<4; j++)
+                System.out.println ("la cantidad de gente que estuvo en el piso " + (i +1) + " en la oficina " + (j+1) + " es " + edificio [i][j]);
     }
     
 }
+
+
+// poner i++ en el println corre la POSICION, al hcaer i+1 se imprime el valor de i pero incrementado en 1 (NO corre la posicion) //
